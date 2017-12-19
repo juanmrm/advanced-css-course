@@ -1,0 +1,28 @@
+- box-sizing: 
+  
+    El ancho / alto de un elemento se altera si se le aplica un borde o un padding. La anchura del elemento 
+    que tu especificas con CSS, por defecto no incluye borde ni padding.
+    Por defecto el valor es box-sizing: content-box;
+    Con border-box hacemos que el ancho / alto especificados sean el total y no se sume luego padding ni bordes.
+
+- font-family, font-weight, font-size: 
+  tipo de fuente, tipo y tamaño.
+
+- line-height: 
+  Altura de linea.
+
+- background-image, background-size, background-position:
+  Imagen de fondo: url('');
+  Tamaño: cover, content
+  Posicion: top, center, bottom...
+
+- linear-gradient: crear un gradiente lineal de color
+  p.e: linear-gradient(direccion, colorA, colorB) // Con la direccion indicada desde el colorA al colorB
+
+- clip-path: 
+  Especifica un recorte. Todo lo que esta dentro del path indicado es visible y lo que esta fuera esta oculto.
+  http://bennettfeely.com/clippy/  
+
+
+
+

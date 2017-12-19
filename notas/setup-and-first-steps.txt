@@ -1,0 +1,14 @@
+1 - Perform a basic reset using the universal selector:
+  Eliminaremos todos los margin / padding de cualquier elemento para tener el mismo punto de partida en todos los navegadores.
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+2 - Set Project-wide font definitions:
+
+  En el body porque es mas eficiente que ponerlo en el universal selector
+ 
+    font-family, font-weight, font-size, line-height
