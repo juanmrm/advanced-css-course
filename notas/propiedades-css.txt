@@ -21,8 +21,10 @@
 
 - clip-path: 
   Especifica un recorte. Todo lo que esta dentro del path indicado es visible y lo que esta fuera esta oculto.
-  http://bennettfeely.com/clippy/  
+  http://bennettfeely.com/clippy/
 
+- position: absolute / relative.  
+  p.e: ver el ejemplo del logo-box y el header
 
 
 
