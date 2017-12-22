@@ -43,18 +43,72 @@ body {
 }
 
 .logo {
-  height: 35px;
+  height: 35px; /* Width va a ser inferida automaticamente */
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%; /* 50% a la izquierda con respecto al elemento padre que es el header (relative) */
+  transform: translate(-50%, -50%); /* Tranformacion con respecto al propio elemento en si, moviendolo un -50% en ejes X e Y  */
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden; /* Fix para cuando vemos que la transformacion se agita ligeramente (shaking)*/
 }
 
 .heading-primary-main {
-
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;  
+  /*
+    animation-delay: 3s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-out; 
+  */
 }
 
 .heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17.4px;
+  animation: moveInRight 1s ease-out;
+}
 
+@keyframes moveInLeft { /* Definimos con porcentajes los distintos pasos de la tranformacion (0 -> inicial, 100 -> final) */
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /* Posicion inicial */
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* No queremos realizar ninguna tranformacion con respecto al estilo original */
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

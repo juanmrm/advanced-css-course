@@ -5,8 +5,8 @@
     Por defecto el valor es box-sizing: content-box;
     Con border-box hacemos que el ancho / alto especificados sean el total y no se sume luego padding ni bordes.
 
-- font-family, font-weight, font-size: 
-  tipo de fuente, tipo y tamaño.
+- font-family, font-weight, font-size, letter-spacing: 
+  tipo de fuente, grosor, tamaño y espaciado entre caracteres.
 
 - line-height: 
   Altura de linea.
@@ -23,8 +23,20 @@
   Especifica un recorte. Todo lo que esta dentro del path indicado es visible y lo que esta fuera esta oculto.
   http://bennettfeely.com/clippy/
 
-- position: absolute / relative.  
+- position: absolute / relative. 
+  Las usamos en combinacion con top, right, bottom y left.
   p.e: ver el ejemplo del logo-box y el header
+
+- display: block
+  Convertimos un elemento inline, en un elemento de bloque con salto de linea (ocupa el 100% del width)
+
+- transform: translate(-50%, -50%):
+  Realizamos una translación en ejes X e Y del -50%.
+
+- animation / keyframes
+  Sirven para definir y aplicar animaciones. En el keyframe definimos los pasos a traves de porcentajes.
+    animation-name, animation-duration, animation-delay, animation-iteration-count
+    p.e: ver heading-primary-sub y moveInRight.
 
 
 
