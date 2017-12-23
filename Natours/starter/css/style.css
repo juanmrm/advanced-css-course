@@ -51,12 +51,14 @@ body {
   top: 40%;
   left: 50%; /* 50% a la izquierda con respecto al elemento padre que es el header (relative) */
   transform: translate(-50%, -50%); /* Tranformacion con respecto al propio elemento en si, moviendolo un -50% en ejes X e Y  */
+  text-align: center; /* Indica la alineacion de los elementos inline dentro dentro del bloque */
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden; /* Fix para cuando vemos que la transformacion se agita ligeramente (shaking)*/
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -78,7 +80,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 17.4px;
-  animation: moveInRight 1s ease-out;
+  animation: moveInRight 1s ease-out; /* shorthand for animation properties */
 }
 
 @keyframes moveInLeft { /* Definimos con porcentajes los distintos pasos de la tranformacion (0 -> inicial, 100 -> final) */
@@ -111,4 +113,68 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.btn:link, .btn:visited { /* Pseudo-clases para dar estilos a los elementos bajo ciertos estados */
+  text-transform: uppercase;
+  text-decoration: none; /* Eliminamos los estilos de decoracion por defecto, en este caso el subrayado */
+  padding: 15px 40px;
+  display: inline-block; /* Al ser texto en principio no se comporta como un bloque, es un elemento inline */
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;  
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0,.2); /* Efecto sombra, eje X, eje Y, Blur, color */
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0,.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after { /* Queremos que se aplique justo despues de mostrar el elemento */
+  content: ""; /* Sin poner content no funciona */
+  display: inline-block;
+  height: 100%; /* Ocupando el 100% del padre */
+  width: 100%;
+  border-radius: 100px;
+  position: absolute; /* Con respecto al padre relativo */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Lo posicionamos por detras del elemento */
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after { /* Queremos aplicarlo justo despues de que se active el hover */
+  /* transform: scale(1.5); Escalar el elemento entero (X e Y) */
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s backwards; /* Animacion moveInBottom de 0.5s, ease-out, 0.75s delay y estado inicial el ultimo keyframe */
 }

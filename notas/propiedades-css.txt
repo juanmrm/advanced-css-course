@@ -6,37 +6,87 @@
     Con border-box hacemos que el ancho / alto especificados sean el total y no se sume luego padding ni bordes.
 
 - font-family, font-weight, font-size, letter-spacing: 
-  tipo de fuente, grosor, tamaño y espaciado entre caracteres.
+  
+    tipo de fuente, grosor, tamaño y espaciado entre caracteres.
+
+- text-transform, text-decoration
+  
+    Transformar el texto, eliminar estilos por defecto
+
+- border, border-radius
+  
+    Definimos un border, estilos, grosor etc...
+    Con radius podemos redondear las esquinas del elemento.
 
 - line-height: 
-  Altura de linea.
+    
+    Altura de linea.
 
 - background-image, background-size, background-position:
-  Imagen de fondo: url('');
-  Tamaño: cover, content
-  Posicion: top, center, bottom...
+    
+    Imagen de fondo: url('');
+    Tamaño: cover, content
+    Posicion: top, center, bottom...
 
 - linear-gradient: crear un gradiente lineal de color
-  p.e: linear-gradient(direccion, colorA, colorB) // Con la direccion indicada desde el colorA al colorB
+    
+    p.e: linear-gradient(direccion, colorA, colorB) // Con la direccion indicada desde el colorA al colorB
+
+- box-shadow:
+    
+    Efecto de sombra para un box. Efecto sombra, eje X, eje Y, Blur, color
 
 - clip-path: 
-  Especifica un recorte. Todo lo que esta dentro del path indicado es visible y lo que esta fuera esta oculto.
-  http://bennettfeely.com/clippy/
+    
+    Especifica un recorte. Todo lo que esta dentro del path indicado es visible y lo que esta fuera esta oculto.
+    http://bennettfeely.com/clippy/
 
 - position: absolute / relative. 
-  Las usamos en combinacion con top, right, bottom y left.
-  p.e: ver el ejemplo del logo-box y el header
+    
+    Las usamos en combinacion con top, right, bottom y left.
+    p.e: ver el ejemplo del logo-box y el header
 
-- display: block
-  Convertimos un elemento inline, en un elemento de bloque con salto de linea (ocupa el 100% del width)
+- display: block / inline-block
+    
+    block: convertimos un elemento inline, en un elemento de bloque (con salto de linea), que ocupa el 100% del width
+    inline-block: similar al anterior, pero sigue siendo inline y no ocupa 100% del width, solo lo necesario.
 
-- transform: translate(-50%, -50%):
-  Realizamos una translación en ejes X e Y del -50%.
+    De esta forma al ser ya un elemento que el model box puede tratar, pordemos darle padding etc...
+
+- z-index:
+
+    Para un elemento box, especifica el nivel de prioridad del box con respecto a la pila del contexto actual del elemento.
+    Un elemento con z-index mayor que otro se muestra por encima de uno cuyo valor sea menor.
+
+- transform: 
+    
+    Para realizar transformacione sobre los elementos (translaciones, escalado...)
+    p.e: translate(-50%, -50%), scale(2)...
+    
+    Realizamos una translación en ejes X e Y del -50%, o un escalado al doble...
 
 - animation / keyframes
-  Sirven para definir y aplicar animaciones. En el keyframe definimos los pasos a traves de porcentajes.
-    animation-name, animation-duration, animation-delay, animation-iteration-count
-    p.e: ver heading-primary-sub y moveInRight.
+    
+    Sirven para definir y aplicar animaciones. En el keyframe definimos pasos mediante porcentajes.
+    animation-name, animation-duration, animation-delay, animation-iteration-count, animation-fill-mode
+    Hay un shorthand que es animation.
 
+    p.e: animation: moveInBottom .5s ease-out .75s; /* Con un delay de 0.75s */
+         animation-fill-mode: backwards;
 
+    p.e: ver btn-animated y moveInBottom.
+
+- transition
+
+    Para hacer transiciones usandolo conjuntamente con las pseudo-clases (after, hover...).
+    Se puede usar tambien conjuntamente con animation / keyframes donde definimos nuestras custom animations.
+
+- pseudo-clases
+
+    Son muy interesantes para poder definir el comportamiento de un elemento bajo ciertas situaciones / selecciones
+    link: un link que no todavia no se han visitado.
+    visited: un link que ha sido visitado.
+    hover: un elemento que esta siendo señalado por el cursor.
+    active: un elemento que esta siendo activado. 
+    after: se aplica inmediatamente despues de mostrar el contenido del elemento.
 
