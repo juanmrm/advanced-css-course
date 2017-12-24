@@ -1,0 +1,57 @@
+VER slides-students-C04.pdf
+
+-- Los 3 pilares para escribir buen html / css
+  responsive-design: construimos 1 unica web que funcione bien en distintos tipos de pantallas / dispositivos
+  maintainable and scalable code: codigo limpio, facil de entender, extender y reusable.
+  web performance: rapida y pequeña.
+
+-- Qué ocurre con el CSS cuando se carga una página?
+
+  Load HTML -> Parse HTML  -----------------> Document Object Model (DOM) ---
+                  |                                                          |
+                Load CSS ----> Parse CSS ---> CSS Object Model (CSSOM)  -----
+                                                                             |
+  Final Rendered Website <-- Website rendering: Visual Formating Model <-- Render Tree
+
+-- Cómo se parsea el CSS?: 
+
+  1 - The cascade and specificity (Transparencias 26, 27, 29, 30)
+
+    Cascade: proceso de combinar las diferentes hojas de estilos y resolver los conflictos entre distintas reglas de CSS
+    y declaraciones cuando hay más de una regla que aplica.
+
+                        Same importance?                       Same importance?
+          IMPORTANCE  ------------------->  SPECIFICITY --------------------------> SOURCE ORDER
+    1. User !important declarations         1. Inline styles                        The last declaration in the code override           
+    2. Author !important declarations       2. IDs                                  all other declarations and will be applied.
+    3. Author declarations                  3. Classes, psudo-classed, attribute
+    4. User declarations                    4. Elements, psudo-elements
+    5. Default browser declarations
+
+  2 - Value Processing  (Transparencias 31, 32)
+
+    1. Declared value (author declarations)
+    2. Cascade value (after the cascade)
+    3. Specified value (defaulting if there is no cascade value)
+    4. Computed value (converting relative values %, em, rem to absolute pixels)
+    5. Used value (final calculations, based on layout)
+    6. Actual value (browser and device restrictions)
+
+    Es super util utilizar rem para Responsive Design. Ver ejemplo del Natour Project.
+    Definimos un font-size en el html css, con un porcentaje respecto al Default Browser font-size (16px).
+    En el resto de la maquetacion no usaremos px, sino rem y veremos que cambiando el valor del font-size 
+    toda la pagina refleja los cambios.
+    IE < 9 no soporta rem.
+
+  3 - Inheritance (more maintainable code)
+
+    Es una forma de pasar valores de ciertas propiedades especificas de padres a hijos. No todas las propiedades declarations
+    CSS son heredables y ademas NO se pasa el valor declarado, sino el valor calculado del padre.
+    La herencia funciona unicamente cuando no existe un valor declarado y es debido a que todas las propiedades
+    CSS deben de tener un valor.
+
+    Las propiedades relacionadas con el text son heredables: font-family, font-size, color...
+    Otras como padding, margin NO son heredables.
+
+    inherit keyword para forzar herencia de una propiedad.
+    initial keyword para resetear el valor de una propiedad a su valor inicial.
