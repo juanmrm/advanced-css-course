@@ -55,3 +55,27 @@ VER slides-students-C04.pdf
 
     inherit keyword para forzar herencia de una propiedad.
     initial keyword para resetear el valor de una propiedad a su valor inicial.
+
+-- Cómo se renderiza el CSS? (Transparencias 41 - 47)
+
+  Visual Formatting Model: algoritmo que calcula las cajas y el layout de estas cajas para poder renderizar
+  cada elemento del árbol y poder así determinar el layout final de la página.
+
+  1 - The Box Model: margin, padding, width, height, content, border.
+    height and width: se calculan sumando bordes, padding y alto o ancho.
+
+    Podemos cambiar el comportamiento para que si especificamos width o height este incluya bordes y padding
+      ->  box-sizing: border-box
+
+  2 - Box types: inline vs block-level (block) vs inline-block (inline-block).
+  
+  3 - Positioning schemes: normal, floats, absolute positioning.
+
+  4 - Stacking context: z-index, opacity, transform, filter...crean nuevos contextos.
+
+-- CSS Architecture, Components and BEM (Transparencias 49, 52)
+
+  BEM: Block Element Modifier (meaningfull class names using __ for elements and -- for modifiers)
+  The 7-1 Pattern: usando tambien preprocesadores.
+
+
