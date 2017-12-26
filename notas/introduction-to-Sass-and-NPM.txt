@@ -1,0 +1,66 @@
+Para probar directamente el codigo podemos usar https://codepen.io
+Aqui podemos en las settings de CSS, cambiar el preprocesador a SCSS
+Ejemplos: nav-example.html y nav-example.scss.
+
+Sass permite 2 sintaxis: 
+  - SCSS: Sassy CSS, es una extension de la sintaxis CSS3. Anidamiendo selectores con {} y separacion estilos con salto de linea y ;
+  - Sintaxis saas o sintaxis indentada: anidamiento de selectores con tabuladores y separacion de estilos con salto de linea.
+
+  # Convierte un archivo Sass en SCSS
+  $ sass-convert estilos.sass estilos.scss
+ 
+  # Convierte un archivo SCSS en Sass
+  $ sass-convert estilos.scss estilos.sass
+
+1 - Comentarios.
+
+  // o /* */
+
+2 - Variables:
+
+  $name_variable: tiene que comenzar por $
+  p.e: $color-primary: #f9ed69;
+
+3 - Nested elements: 
+
+  Sirven para no tener que repetir codigo, ya se encarga el preprocesador de expandirlo luego en CSS
+
+  &: se sustituye por la ruta completa donde estemos.
+
+  p.e: 
+   .navigation {
+    list-style: none;  
+    li {
+      margin-left: 30px;
+
+      &:first-child { // Es lo mismo que poner .navigation li:first-child
+        margin: 0;
+      }
+    
+    }
+}
+
+4 - Mixins, extends, functions: con el objectivo de cumplir el DRY principle
+
+  Mixins: es una pieza de codigo reutilizable que cada vez que la utilizamos se sustituye por su codigo. Podemos verlo
+          como una variable que almacena codigo. Se le pueden pasar argumentos (son opcionales)
+
+    declaracion: @mixin name(arg1...argN) { .... }            
+    utilizacion:  @include name(arg1...argN)
+
+  Function: Sass ya cuenta con funciones predefinidas que podemos utilizar p.e para oscurecer, aclarar colores (darken, lighten)
+            También podemos escribir nuestras funciones. Es parecido a un mixin, solo que aqui se calcula un valor a partir de los
+            argumentos.
+
+    declaracion: @function name (arg1...argN) {... @return value}
+    utilizacion: name(arg1...argN)
+
+  Extends: escribimos un placeholder y ponemos los estilos dentro de el.
+
+    declaracion: %name_placeholder { styles...}
+    utilizacion: @extends name_placeholder
+
+    Ojo: no es lo mismo mixin que extends. En mixin el codigo se copia al elemento y en extends lo que hace el precompilador
+         es copiar el selector que esta extendiendo remplazando el name_placeholder;
+      
+    Solo se debe utilizar extends cuando los elementos estan muy relacionados unos con otro, sino evitar.
