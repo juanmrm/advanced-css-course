@@ -12,6 +12,8 @@ Sass permite 2 sintaxis:
   # Convierte un archivo SCSS en Sass
   $ sass-convert estilos.scss estilos.sass
 
+  NOTA: un archivo CSS valido tambien es un SCSS valido automaticamente (por la sintaxis utilizada)
+
 1 - Comentarios.
 
   // o /* */
@@ -73,3 +75,18 @@ NPM Packages:
     npm install node-sass --save-dev // Dependencia de desarrollo.
     npm install jquery --save // Instalar dependencia para PRO.
     npm uninstall jquery --save // Eliminar una dependencia.
+
+  4 - Compilar un scss a css:
+
+    En la seccion de scripts del package.json podemos definir un nuevo scripts
+    "compile:sass": "node-sass sass/main.scss css/style.css -w" // Muy util el flag -w para que se quede haciendo el watch
+
+    Ejecutar desde el cmd con: npm run compile:saas
+
+  5 - Una forma sencilla de recargar la pagina automaticamente cuando se producen cambios
+    
+    Usar un http server:
+      npm install live-server -g // La instalaremos como dependencia global.
+
+    Arrancarlo en el raiz de nuestro proyecto con:
+      live-server // Por defecto arranca en el puerto 8080.
