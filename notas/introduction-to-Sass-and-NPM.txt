@@ -64,3 +64,12 @@ Sass permite 2 sintaxis:
          es copiar el selector que esta extendiendo remplazando el name_placeholder;
       
     Solo se debe utilizar extends cuando los elementos estan muy relacionados unos con otro, sino evitar.
+
+NPM Packages:
+
+  1 - Instalar Node.js
+  2 - Inicializar en la carpeta de nuestro proyecto: npm init
+  3 - Instalar dependencias:
+    npm install node-sass --save-dev // Dependencia de desarrollo.
+    npm install jquery --save // Instalar dependencia para PRO.
+    npm uninstall jquery --save // Eliminar una dependencia.
