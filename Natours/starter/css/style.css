@@ -30,26 +30,23 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* Hacemos uso de un poligono de 4 lados para recortar */ }
-
-.header__logo-box {
-  position: absolute;
-  /* Posicionamiento absoluto frente a un elemento con posicionamiento relativo */
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem;
-  /* Width va a ser inferida automaticamente */ }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  /* 50% a la izquierda con respecto al elemento padre que es el header (relative) */
-  transform: translate(-50%, -50%);
-  /* Tranformacion con respecto al propio elemento en si, moviendolo un -50% en ejes X e Y  */
-  text-align: center;
-  /* Indica la alineacion de los elementos inline dentro dentro del bloque */ }
+  .header__logo-box {
+    position: absolute;
+    /* Posicionamiento absoluto frente a un elemento con posicionamiento relativo */
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem;
+    /* Width va a ser inferida automaticamente */ }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* 50% a la izquierda con respecto al elemento padre que es el header (relative) */
+    transform: translate(-50%, -50%);
+    /* Tranformacion con respecto al propio elemento en si, moviendolo un -50% en ejes X e Y  */
+    text-align: center;
+    /* Indica la alineacion de los elementos inline dentro dentro del bloque */ }
 
 .heading-primary {
   color: #fff;
@@ -57,27 +54,25 @@ body {
   backface-visibility: hidden;
   /* Fix para cuando vemos que la transformacion se agita ligeramente (shaking)*/
   margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  /*
-    animation-delay: 3s;
-    animation-iteration-count: 3;
-    animation-timing-function: ease-out; 
-  */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out;
-  /* shorthand for animation properties */ }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /*
+      animation-delay: 3s;
+      animation-iteration-count: 3;
+      animation-timing-function: ease-out; 
+    */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+    /* shorthand for animation properties */ }
 
 @keyframes moveInLeft {
   /* Definimos con porcentajes los distintos pasos de la tranformacion (0 -> inicial, 100 -> final) */
@@ -127,14 +122,15 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   /* Efecto sombra, eje X, eje Y, Blur, color */ }
+  .btn:hover::after {
+    /* Queremos aplicarlo justo despues de que se active el hover */
+    /* transform: scale(1.5); Escalar el elemento entero (X e Y) */
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
 
 .btn::after {
   /* Queremos que se aplique justo despues de mostrar el elemento */
@@ -153,14 +149,11 @@ body {
   /* Lo posicionamos por detras del elemento */
   transition: all .4s; }
 
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  /* Queremos aplicarlo justo despues de que se active el hover */
-  /* transform: scale(1.5); Escalar el elemento entero (X e Y) */
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s backwards;

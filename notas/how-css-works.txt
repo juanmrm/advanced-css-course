@@ -76,6 +76,7 @@ VER slides-students-C04.pdf
 -- CSS Architecture, Components and BEM (Transparencias 49, 52)
 
   BEM: Block Element Modifier (meaningfull class names using __ for elements and -- for modifiers)
+  
   The 7-1 Pattern: usando tambien preprocesadores.
 
 
