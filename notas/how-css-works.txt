@@ -75,8 +75,15 @@ VER slides-students-C04.pdf
 
 -- CSS Architecture, Components and BEM (Transparencias 49, 52)
 
-  BEM: Block Element Modifier (meaningfull class names using __ for elements and -- for modifiers)
+    https://sass-guidelin.es/es/#arquitectura
+
+    BEM: Block Element Modifier (meaningfull class names using __ for elements and -- for modifiers)
   
-  The 7-1 Pattern: usando tambien preprocesadores.
+    The 7-1 Pattern:
+      7 Carpetas:
+        base , components, layout, pages, themes, abstracts, vendors
+      
+      1 Main file: main.scss
+        contendrá sólo imports.
 
 

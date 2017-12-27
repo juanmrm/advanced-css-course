@@ -1,79 +1,3 @@
-/* Universal selector y tambien usar pseudo-classes */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-  /* Forzamos herencia, que sera en este caso la especificada en el body */ }
-
-html {
-  font-size: 62.5%;
-  /* Default browser (16px) -> 1rem es ahora 10px ((16 * 62.5) / 100)*/ }
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  /* Un padding de 30px para todo el contenido */
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  /* vh => 95% del viewport height */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* Hacemos uso de un poligono de 4 lados para recortar */ }
-  .header__logo-box {
-    position: absolute;
-    /* Posicionamiento absoluto frente a un elemento con posicionamiento relativo */
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem;
-    /* Width va a ser inferida automaticamente */ }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    /* 50% a la izquierda con respecto al elemento padre que es el header (relative) */
-    transform: translate(-50%, -50%);
-    /* Tranformacion con respecto al propio elemento en si, moviendolo un -50% en ejes X e Y  */
-    text-align: center;
-    /* Indica la alineacion de los elementos inline dentro dentro del bloque */ }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* Fix para cuando vemos que la transformacion se agita ligeramente (shaking)*/
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    /*
-      animation-delay: 3s;
-      animation-iteration-count: 3;
-      animation-timing-function: ease-out; 
-    */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out;
-    /* shorthand for animation properties */ }
-
 @keyframes moveInLeft {
   /* Definimos con porcentajes los distintos pasos de la tranformacion (0 -> inicial, 100 -> final) */
   0% {
@@ -104,6 +28,57 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+/* Universal selector y tambien usar pseudo-classes */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* Forzamos herencia, que sera en este caso la especificada en el body */ }
+
+html {
+  font-size: 62.5%;
+  /* Default browser (16px) -> 1rem es ahora 10px ((16 * 62.5) / 100)*/ }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  /* Un padding de 30px para todo el contenido */ }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* Fix para cuando vemos que la transformacion se agita ligeramente (shaking)*/
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /*
+      animation-delay: 3s;
+      animation-iteration-count: 3;
+      animation-timing-function: ease-out; 
+    */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+    /* shorthand for animation properties */ }
 
 .btn:link, .btn:visited {
   /* Pseudo-clases para dar estilos a los elementos bajo ciertos estados */
@@ -158,3 +133,30 @@ body {
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s backwards;
   /* Animacion moveInBottom de 0.5s, ease-out, 0.75s delay y estado inicial el ultimo keyframe */ }
+
+.header {
+  height: 95vh;
+  /* vh => 95% del viewport height */
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* Hacemos uso de un poligono de 4 lados para recortar */ }
+  .header__logo-box {
+    position: absolute;
+    /* Posicionamiento absoluto frente a un elemento con posicionamiento relativo */
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem;
+    /* Width va a ser inferida automaticamente */ }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* 50% a la izquierda con respecto al elemento padre que es el header (relative) */
+    transform: translate(-50%, -50%);
+    /* Tranformacion con respecto al propio elemento en si, moviendolo un -50% en ejes X e Y  */
+    text-align: center;
+    /* Indica la alineacion de los elementos inline dentro dentro del bloque */ }

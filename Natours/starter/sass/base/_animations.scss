@@ -1,0 +1,43 @@
+@keyframes moveInLeft { /* Definimos con porcentajes los distintos pasos de la tranformacion (0 -> inicial, 100 -> final) */
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); /* Posicion inicial */
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* No queremos realizar ninguna tranformacion con respecto al estilo original */
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

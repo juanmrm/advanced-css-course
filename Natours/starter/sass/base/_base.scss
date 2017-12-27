@@ -1,0 +1,16 @@
+/* Universal selector y tambien usar pseudo-classes */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* Forzamos herencia, que sera en este caso la especificada en el body */
+}
+
+html {
+  font-size: 62.5%; /* Default browser (16px) -> 1rem es ahora 10px ((16 * 62.5) / 100)*/
+}
+
+body {
+  box-sizing: border-box;
+}

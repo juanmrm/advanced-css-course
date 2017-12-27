@@ -2,6 +2,8 @@ Para probar directamente el codigo podemos usar https://codepen.io
 Aqui podemos en las settings de CSS, cambiar el preprocesador a SCSS
 Ejemplos: nav-example.html y nav-example.scss.
 
+Guía de Sass: https://sass-guidelin.es/es/
+
 Sass permite 2 sintaxis: 
   - SCSS: Sassy CSS, es una extension de la sintaxis CSS3. Anidamiendo selectores con {} y separacion estilos con salto de linea y ;
   - Sintaxis saas o sintaxis indentada: anidamiento de selectores con tabuladores y separacion de estilos con salto de linea.
@@ -90,3 +92,9 @@ NPM Packages:
 
     Arrancarlo en el raiz de nuestro proyecto con:
       live-server // Por defecto arranca en el puerto 8080.
+  
+  Architecture (ver how-css-works.txt):
+    BEM: Block Element Modifier (meaningfull class names using __ for elements and -- for modifiers)
+    The 7-1 Pattern: usando tambien preprocesadores (7 carpetas y 1 main)
+    (https://sass-guidelin.es/es/#arquitectura)
+

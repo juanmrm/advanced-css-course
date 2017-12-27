@@ -1,0 +1,32 @@
+.header {
+  height: 95vh; /* vh => 95% del viewport height */
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark ,0.8)),
+  url('../img/hero.jpg');
+
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* Hacemos uso de un poligono de 4 lados para recortar */
+
+  &__logo-box {
+    position: absolute; /* Posicionamiento absoluto frente a un elemento con posicionamiento relativo */
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem; /* Width va a ser inferida automaticamente */
+  }
+  
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%; /* 50% a la izquierda con respecto al elemento padre que es el header (relative) */
+    transform: translate(-50%, -50%); /* Tranformacion con respecto al propio elemento en si, moviendolo un -50% en ejes X e Y  */
+    text-align: center; /* Indica la alineacion de los elementos inline dentro dentro del bloque */
+  }  
+  
+}
