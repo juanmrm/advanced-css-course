@@ -1,3 +1,9 @@
+- Selectores en CSS:
+  https://www.w3schools.com/cssref/css_selectors.asp
+
+  Se pueden seleccionar por id, clase, tag, atributo etc...Tambien se pueden poder modificadores del tipo
+  $ (termine en), *(contenga), ^(empiece por)...
+
 - box-sizing: 
   
     El ancho / alto de un elemento se altera si se le aplica un borde o un padding. La anchura del elemento 
@@ -17,6 +23,13 @@
   
     Definimos un border, estilos, grosor etc...
     Con radius podemos redondear las esquinas del elemento.
+
+- width, max-width, height, max-height
+  Con max definimos el tamaño maximo que nos gustaria que tuviese. Si este tamaño no es posible, entonces
+  se utilizara el 100% del tamaño disponible.
+
+- Centrar un elemento dentro de otro.
+  margin: 0 auto;
 
 - line-height: 
     
@@ -89,4 +102,13 @@
     hover: un elemento que esta siendo señalado por el cursor.
     active: un elemento que esta siendo activado. 
     after: se aplica inmediatamente despues de mostrar el contenido del elemento.
+    not: sirve para seleccionar aquellos todos los elementos excepto el indicado entre parentesis.
+    last-child: el ultimo hijo.
+    first-child: el primer hijo.
+
+  - calculation: función que permite hacer calculos, muy util para width, height...
+
+    calc(...) // En CSS podemos mezclar distintas unidades, pero en Sass no y esto es debido a que 
+                 que Saas es un preprocesador que primero va a transformar a CSS y no conoce el valor de
+                 las unidades relativas en tiempo de compilación (se conocen en tiempo de renderizado)
 
