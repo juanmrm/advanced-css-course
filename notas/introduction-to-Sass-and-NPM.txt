@@ -49,14 +49,14 @@ Sass permite 2 sintaxis:
   Mixins: es una pieza de codigo reutilizable que cada vez que la utilizamos se sustituye por su codigo. Podemos verlo
           como una variable que almacena codigo. Se le pueden pasar argumentos (son opcionales)
 
-    declaracion: @mixin name(arg1...argN) { .... }            
+    declaracion: @mixin name($arg1...$argN) { .... }            
     utilizacion:  @include name(arg1...argN)
 
   Function: Sass ya cuenta con funciones predefinidas que podemos utilizar p.e para oscurecer, aclarar colores (darken, lighten)
             También podemos escribir nuestras funciones. Es parecido a un mixin, solo que aqui se calcula un valor a partir de los
             argumentos.
 
-    declaracion: @function name (arg1...argN) {... @return value}
+    declaracion: @function name ($arg1...$argN) {... @return value}
     utilizacion: name(arg1...argN)
 
   Extends: escribimos un placeholder y ponemos los estilos dentro de el.
