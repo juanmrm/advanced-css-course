@@ -15,7 +15,7 @@
   
     tipo de fuente, grosor, tamaño y espaciado entre caracteres.
 
-- text-transform, text-decoration
+- text-transform, text-decoration, text-shadow
   
     Transformar el texto, eliminar estilos por defecto
 

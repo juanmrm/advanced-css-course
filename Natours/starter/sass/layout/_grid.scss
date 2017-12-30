@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto; // Para centrar un elemento dentro de otro usamos este truco
 
   &:not(:last-child) {
@@ -10,7 +9,6 @@
   @include clearfix; // Para que las filas no colapsen y su height sea 0.
 
   [class^="col-"] { // Seleccionaremos cualquier elemento cuya clase comience (^) por col-
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
