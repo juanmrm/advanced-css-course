@@ -30,7 +30,7 @@ Sass permite 2 sintaxis:
   Sirven para no tener que repetir codigo, ya se encarga el preprocesador de expandirlo luego en CSS
 
   &: se sustituye por la ruta completa donde estemos.
-
+  & > p: seria el direct child de &
   p.e: 
    .navigation {
     list-style: none;  

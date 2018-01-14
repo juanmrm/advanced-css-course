@@ -1,3 +1,6 @@
+Tips:
+  Usar Emmet p.e: .row>.col-1-of-4>.feature-box
+
 1 - Perform a basic reset using the universal selector:
   Eliminaremos todos los margin / padding de cualquier elemento para tener el mismo punto de partida en todos los navegadores.
 
@@ -12,3 +15,9 @@
   En el body porque es mas eficiente que ponerlo en el universal selector
  
     font-family, font-weight, font-size, line-height
+
+3 - Incluir una fuente de iconos:
+
+  p.e: http://linea.io/
+
+  Copiamos a nuestra carpeta de css el css y los icon-fonts y lo incluiremos en nuestro index.html.
