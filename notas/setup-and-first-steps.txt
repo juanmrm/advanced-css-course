@@ -1,5 +1,7 @@
 Tips:
-  Usar Emmet p.e: .row>.col-1-of-4>.feature-box
+  Usar Emmet p.e: 
+    .row>.col-1-of-4>.feature-box
+    .row>(.col-1-of-3)*3
 
 1 - Perform a basic reset using the universal selector:
   Eliminaremos todos los margin / padding de cualquier elemento para tener el mismo punto de partida en todos los navegadores.

@@ -89,6 +89,10 @@
 
     p.e: ver btn-animated y moveInBottom.
 
+- perspective / backface-visibility
+
+  Se suelen usar junto con transform / transition para conseguir efectos más chulos.
+
 - transition
 
     Para hacer transiciones usandolo conjuntamente con las pseudo-clases (after, hover...).
