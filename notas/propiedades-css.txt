@@ -19,6 +19,10 @@
   
     Transformar el texto, eliminar estilos por defecto
 
+- margin vs paddings:
+    1 margins of adjacent items will collapse but with Flex or Grid layout, margin collapsing doesn't exist.
+	2 padding is included in the click region and background color/image, but not the margin.
+
 - border, border-radius
   
     Definimos un border, estilos, grosor etc...
